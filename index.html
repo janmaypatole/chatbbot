@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+   <meta charset="UTF-8">
+  <meta name="viewreport" content="with=device-width, initial-scale=1.0">
+   <title>Friday Chatbot</title>
+    <style>
+    #chatLog{color: rgb(83, 220, 20);
+      text-align: center}
+      body{background-color: rgb(4, 0, 255);}
+    h2{text-align: center;}
+   </style>      
+   <script>
+
+  var know={
+   "Hi":"hello",
+   "bye":"bye come and visit again thank you for visiting me ",
+   "who are you":"I am a jambot",
+   "what is your name":"my name is jambot",
+   "who made you out ":"his name is janmay",
+   "how are you":"I am fine",
+   "can you please open amazon":"sure here is the link just copy it (https://www.amazon.in/)",
+   "do you have a car":"no",
+   "where do you live":"I live In India",
+   "in which state":"gujrat",
+   "what is your favorite colour":"my favorite colour is blue",
+   "can you please open mario game":"sure why not here is the link just copy it(https://supermarioplay.com/)paste it in your browser and then go down and you will be able to see mario game you can do full screen",
+   "which is the biggest country?":"The Russia",
+   "which is the smallest country":"Vatican City",
+   "how large is universe":"93 billion light years",
+   "when was the super mario game was created":"14 July 1983",
+}  
+
+
+   
+   function talk(){
+      var user = document.getElementById("user.box")
+      document.getElementById("chatlog").innerHTML +=user+"<br>";
+      if(user in know){
+          document.getElementById("chatlog").innerHTML += know[user]+"<br>";
+      }else{
+          document.getElementById("chatlog").innerHTML+="hello!<br>"
+      }
+      }
+   </script>      
+</head>
+  <body>
+     <h1 id="chatlog">- 	 - Friday - - chatbot-   -<br></h1>
+  <div style="text-align:center;"><input id="userbox" type="text" onkeydown="if(event.keyCode == 13){talk()}"></div>
+  <h2>Hello I am Friday , Janmay's personal chatbot<br>
+    Ask me some question!</h2>
+
+   </body>
+</html>
+
